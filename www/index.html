@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name = "format-detection" content = "telephone=no"/>
+        <!--
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
+        -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/topcoat-mobile-light.min.css">
+        <title>SmartCar</title>
+        <script src="js/jquery-1.9.1.min.js"></script>
+
+    </head>
+    <body>
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item center full">
+                <h1 class="topcoat-navigation-bar__title">SmartCar</h1>
+            </div>
+        </div>
+        <div id="connectionScreen">
+            <ul id="deviceList" class="topcoat-list">      
+            </ul>
+            <div style="margin: 10px">            
+                <button class="topcoat-button" id="refreshButton">Rafraichir</button>
+            </div>            
+        </div>
+        
+        <div id="vitesseControl">
+            <div>
+                Démarrer la voiture (0 ou 1)
+            </div>
+            <div class="rangeDiv">
+                <input type="range" min="0" max="1" value="0" name="start" id="start" class="topcoat-range"/>
+            </div>
+            <div>
+                Controler la vitesse de la voiture (0 à 80)
+            </div>
+            <div class="rangeDiv">
+                <input type="range" min="0" max="80" value="0" name="vitesse" id="vitesse" class="topcoat-range"/>
+            </div>
+            <div>
+                Controler la direction de la voiture (0° à 180°)
+            </div>
+            <div class="rangeDiv">
+                <input type="range" min="0" max="180" value="0" name="direction" id="direction" class="topcoat-range"/>
+            </div>
+            <div>
+                Controler le sens de la voiture (0 ou 1)
+            </div>
+            <div class="rangeDiv">
+                <input type="range" min="0" max="1" value="0" name="sens" id="sens" class="topcoat-range"/>
+            </div>
+
+            <div id="rgbText">
+                &nbsp;
+            </div>
+            <!--div id="previewColor">
+            </div-->
+            <p>
+                <a class="topcoat-button--large" id="disconnectButton">Disconnect</a>
+            </p>
+        </div>
+        <div id="messageDiv">        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/underscore-min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
